@@ -1,0 +1,35 @@
+@mixin center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading {
+  @include center-flex();
+  text-transform: uppercase;
+  font-family: "Oswald";
+  font-size: 30px;
+}
+
+.plate {
+  @include center-flex();
+}
+
+.plate-button {
+  @include center-flex();
+  margin: 10px;
+}
+
+#plate-div {
+  border: 1px solid black;
+  height: 175px;
+  width: 350px;
+}
+
+#plate-button {
+  height: 50px;
+  width: 150px;
+  background-color: palegreen;
+  border-radius: 5px;
+  color: palevioletred;
+}
