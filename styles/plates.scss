@@ -12,11 +12,11 @@ $blue: #0b103c;
   flex-direction: column;
   text-transform: uppercase;
   font-family: "Oswald";
-  font-size: 30px;
+  font-size: 25px;
   color: $blue;
   h1 {
     margin: 0px;
-    margin-top: 20px;
+    margin-top: 15px;
   }
   h2,
   h4 {
@@ -35,19 +35,23 @@ $blue: #0b103c;
     width: 640px;
     margin: 50px;
   }
-  #plate-number {
-    font-family: "Dosis";
-    color: $blue;
-    font-weight: 700;
-    font-size: 100px;
-  }
+}
+
+.number {
+  font-family: "Dosis";
+  position: absolute;
+  margin-top: 20px;
+  color: $blue;
+  font-weight: 700;
+  font-size: 140px;
 }
 
 .plate-div {
+  position: relative;
   @include center-flex();
   margin: 30px;
   .plate-svg {
-    width: 60vw;
+    width: 55vw;
   }
 }
 
@@ -63,5 +67,18 @@ $blue: #0b103c;
     font-family: "Dosis";
     font-weight: 500;
     text-transform: uppercase;
+  }
+}
+
+.about-div {
+  @include center-flex();
+  flex-direction: column;
+  text-transform: uppercase;
+  font-family: "Oswald";
+  font-size: 2em;
+  margin-top: 75px;
+  p {
+    width: 70vw;
+    font-size: 20px;
   }
 }
