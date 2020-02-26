@@ -23,16 +23,8 @@ function handleData(csv) {
   });
 
   // Plate Div -------------------------
-  d3.select("#plate-div")
-    // .style("background-color", "pink")
-    // .style("border-radius", "1em")
-    // .style("border", "4px solid")
-    // .style("height", "100px")
-    // .style("width", "500px")
-    .style("display", "flex")
-    .style("align-items", "center")
-    .on("click", function() {
-      console.log("tiny plate");
-      d3.select("#plate-number").html(plateNumber);
-    });
+  d3.select("#plate-div").on("click", function() {
+    console.log("tiny plate");
+    d3.select("#plate-number").html(plateNumber);
+  });
 }

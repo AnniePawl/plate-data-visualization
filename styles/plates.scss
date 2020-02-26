@@ -1,3 +1,6 @@
+$yellow: #ffc31f;
+$blue: #0b103c;
+
 @mixin center-flex {
   display: flex;
   justify-content: center;
@@ -6,30 +9,59 @@
 
 .heading {
   @include center-flex();
+  flex-direction: column;
   text-transform: uppercase;
   font-family: "Oswald";
   font-size: 30px;
+  color: $blue;
+  h1 {
+    margin: 0px;
+    margin-top: 20px;
+  }
+  h2,
+  h4 {
+    margin: -5px;
+  }
 }
 
 .plate {
   @include center-flex();
+  #plate-div {
+    @include center-flex();
+    border: 5px solid black;
+    background-color: $yellow;
+    border-radius: 10px;
+    height: 350px;
+    width: 640px;
+    margin: 50px;
+  }
+  #plate-number {
+    font-family: "Dosis";
+    color: $blue;
+    font-weight: 700;
+    font-size: 100px;
+  }
+}
+
+.plate-div {
+  @include center-flex();
+  margin: 30px;
+  .plate-svg {
+    width: 60vw;
+  }
 }
 
 .plate-button {
   @include center-flex();
-  margin: 10px;
-}
-
-#plate-div {
-  border: 1px solid black;
-  height: 175px;
-  width: 350px;
-}
-
-#plate-button {
-  height: 50px;
-  width: 150px;
-  background-color: palegreen;
-  border-radius: 5px;
-  color: palevioletred;
+  #plate-button {
+    height: 77px;
+    width: 200px;
+    background-color: $blue;
+    border-radius: 5px;
+    color: $yellow;
+    font-size: 20px;
+    font-family: "Dosis";
+    font-weight: 500;
+    text-transform: uppercase;
+  }
 }
