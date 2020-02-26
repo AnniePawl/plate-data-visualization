@@ -24,9 +24,9 @@ $blue: #0b103c;
   }
 }
 
-.plate {
+.ca-plate {
   @include center-flex();
-  #plate-div {
+  #ca-plate-div {
     @include center-flex();
     border: 5px solid black;
     background-color: $yellow;
@@ -37,27 +37,29 @@ $blue: #0b103c;
   }
 }
 
-.number {
+.ny-plate-number {
   font-family: "Dosis";
   position: absolute;
   margin-top: 20px;
   color: $blue;
   font-weight: 700;
-  font-size: 140px;
+  font-size: 150px;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5),
+    -3px -3px 3px rgba(255, 355, 255, 0.5);
 }
 
-.plate-div {
+.ny-plate-div {
   position: relative;
   @include center-flex();
   margin: 30px;
-  .plate-svg {
+  .ny-plate-svg {
     width: 55vw;
   }
 }
 
-.plate-button {
+.ny-plate-button {
   @include center-flex();
-  #plate-button {
+  #ny-plate-button {
     height: 77px;
     width: 200px;
     background-color: $blue;

@@ -1,30 +1,55 @@
-// Load Data -----------------------
-d3.csv("./plate-data/rejected-plates.csv").then(function(data) {
-  data.forEach(function(d) {});
+// Load NY Plate Data -----------------------
+d3.csv("./plate-data/rejected-ny-plates.csv").then(function(data) {
+  // data.forEach(function(d) {});
   console.log(data);
-  handleData(data);
+  handleNYData(data);
+});
+
+// Load CA Plate Data ------------------
+d3.csv("./plate-data/rejected-ca-plates.csv").then(function(data) {
+  // data.forEach(function(d) {});
+  console.log(data);
+  handleCAData(data);
 });
 
 // Handle Data ---------------------
-function handleData(csv) {
+function handleNYData(csv) {
   const fields = csv.map(plates => plates.fields);
   console.log(csv);
 
   // Get random plate
-  var button = document.getElementById("plate-button");
+  var button = document.getElementById("ny-plate-button");
 
   let plateNumber = csv[0].plate;
-  document.getElementById("plate-number").innerHTML = plateNumber;
+  document.getElementById("ny-plate-number").innerHTML = plateNumber;
   console.log(plateNumber);
 
   button.addEventListener("click", function() {
     plateNumber = csv[Math.floor(Math.random() * csv.length)];
-    document.getElementById("plate-number").innerHTML = plateNumber.plate;
-  });
-
-  // Plate Div -------------------------
-  d3.select("#plate-div").on("click", function() {
-    console.log("tiny plate");
-    d3.select("#plate-number").html(plateNumber);
+    document.getElementById("ny-plate-number").innerHTML = plateNumber.plate;
   });
 }
+
+// Handle Data ---------------------
+function handleCAData(csv) {
+  const fields = csv.map(plates => plates.fields);
+  console.log(csv);
+
+  // Get random plate
+  var button = document.getElementById("ca-plate-button");
+
+  let plateNumber = csv[0].plate;
+  document.getElementById("ca-plate-number").innerHTML = plateNumber;
+  console.log(plateNumber);
+
+  button.addEventListener("click", function() {
+    plateNumber = csv[Math.floor(Math.random() * csv.length)];
+    document.getElementById("ca-plate-number").innerHTML = plateNumber.plate;
+  });
+}
+
+// Plate Div -------------------------
+d3.select("#plate-div").on("click", function() {
+  console.log("tiny plate");
+  d3.select("#plate-number").html(plateNumber);
+});
