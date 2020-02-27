@@ -2,7 +2,7 @@ $ny-yellow: #ffc31f;
 $ny-blue: #0b103c;
 $ca-blue: #30405c;
 $ca-red: #8f3637;
-$ca-light-red: #bf494b;
+$ca-light-red: #d15254;
 $nav-color: #30405c;
 
 @mixin center-flex {
@@ -15,20 +15,8 @@ $nav-color: #30405c;
   text-transform: uppercase;
   font-family: "Oswald";
   color: $ca-blue;
-}
-
-.main-heading {
-  @include center-flex();
-  flex-direction: column;
-  @include main-font();
-  font-size: 2vw;
-  margin-top: 50px;
   h1 {
-    margin: 0;
-  }
-  p {
-    margin: 0;
-    font-size: 1em;
+    font-size: 5em;
   }
 }
 
@@ -49,6 +37,7 @@ $nav-color: #30405c;
 /* Style the links inside the navigation bar */
 .topnav a {
   @include main-font();
+  font-weight: 300;
   color: white;
   font-size: 30px;
   color: #f2f2f2;
@@ -67,18 +56,13 @@ $nav-color: #30405c;
   color: $ca-light-red;
 }
 
-.ca-content {
-  display: flex;
-  flex-direction: row;
-}
-
-.ca-heading {
+.main-heading {
   @include center-flex();
+  flex-direction: column;
   @include main-font();
-  font-size: 1.5vw;
-  h2 {
-    margin: 0;
-  }
+  margin-top: 135px;
+  margin-bottom: 20px;
+  font-size: 1vw;
 }
 
 #ca-plate-div {
@@ -100,21 +84,27 @@ $nav-color: #30405c;
     width: 50vw;
   }
 }
+
 .ca-plate-button {
   @include center-flex();
   #ca-plate-button {
     @include main-font();
-    font-size: 20px;
+    background-color: $ca-red;
+    color: white;
+    font-size: 25px;
     border-radius: 5px;
-    height: 60px;
-    width: 110px;
+    height: 6vh;
+    width: 12vh;
+  }
+  #ca-plate-button:hover {
+    background-color: $ca-blue;
   }
 }
 
 .ca-plate-info {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  margin-left: 29vw;
 
   p {
     font-weight: 600;
@@ -150,9 +140,9 @@ $nav-color: #30405c;
 
 .ny-plate-button {
   @include center-flex();
+  position: relative;
   #ny-plate-button {
-    height: 77px;
-    width: 200px;
+    position: absolute;
     background-color: $ny-blue;
     border-radius: 5px;
     color: $ny-yellow;
@@ -173,5 +163,33 @@ $nav-color: #30405c;
   p {
     width: 70vw;
     font-size: 20px;
+  }
+}
+
+.resource-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100px;
+  bottom: 0;
+  background-color: $ca-blue;
+  h1 {
+    @include main-font();
+    color: white;
+    margin: 20px;
+  }
+
+  .resource-links {
+    @include main-font();
+    a {
+      font-size: 25px;
+      font-weight: 300;
+      margin: 12px;
+      color: white;
+    }
+    a:hover {
+      color: $ca-light-red;
+      text-decoration: none;
+    }
   }
 }

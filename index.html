@@ -24,109 +24,123 @@
   <body>
     <!-- Navbar -->
     <div class="topnav">
-      <a class="active" href="#home">CA Plates</a>
-      <a href="#contact">NY Plates</a>
+      <a href="#ca-plate-section">CA Plates</a>
+      <a href="#ny-plate-section">NY Plates</a>
       <a href="#about">About</a>
-      <a href="#about">Resources</a>
+      <a href="#resource-section">Resources</a>
     </div>
 
-    <!-- Page Heading -->
-    <div class="main-heading">
-      <h1>Rejected Vanity Plates</h1>
-      <!-- <p>A Goldmine of Amusement</p> -->
-    </div>
+    <div class="containter">
+      <!-- Page Heading -->
+      <div class="main-heading">
+        <h1>Rejected Vanity Plates</h1>
+      </div>
 
-    <!-- CA Heading -->
-    <div class="ca-heading">
-      <!-- <h2>California</h2> -->
-    </div>
+      <!-- CA Plate -->
+      <div id="ca-plate-section">
+        <div id="ca-plate-div">
+          <img class="ca-plate-svg" src="./assets/cali-plate.svg" />
+          <span class="ca-plate-number" id="ca-plate-number"></span>
+        </div>
 
-    <!-- Plate and Button -->
+        <!-- Random CA Plate Button -->
+        <div class="ca-plate-button">
+          <button id="ca-plate-button">New Plate</button>
+        </div>
 
-    <!-- CA Plate -->
-    <div id="ca-plate-div">
-      <img class="ca-plate-svg" src="./assets/cali-plate.svg" />
-      <span class="ca-plate-number" id="ca-plate-number"></span>
-    </div>
+        <!-- CA Plate Info -->
+        <div class="ca-plate-info">
+          <p>
+            Applicant Explanation:&nbsp;&nbsp;<span
+              id="applicant-explanation"
+            ></span>
+          </p>
+          <p>DMV Comments:&nbsp;&nbsp;<span id="dmv-comments"></span></p>
+          <p>Verdict:&nbsp;&nbsp;<span id="verdict"></span></p>
+        </div>
+      </div>
 
-    <!-- Random CA Plate Button -->
-    <div class="ca-plate-button">
-      <button id="ca-plate-button">New Plate</button>
-    </div>
+      <!-- NY Plate SVG -->
+      <div id="ny-plate-section">
+        <div class="ny-plate-div">
+          <img class="ny-plate-svg" src="./assets/ny-plate.svg" />
+          <span class="ny-plate-number" id="ny-plate-number"></span>
+        </div>
 
-    <!-- CA Plate Info -->
-    <div class="ca-plate-info">
-      <p>
-        Applicant Explanation:&nbsp;&nbsp;<span
-          id="applicant-explanation"
-        ></span>
-      </p>
-      <p>DMV Comments:&nbsp;&nbsp;<span id="dmv-comments"></span></p>
-      <p>Verdict:&nbsp;&nbsp;<span id="verdict"></span></p>
-    </div>
+        <!-- Random NY Plate Button -->
+        <div class="ny-plate-button">
+          <button id="ny-plate-button">Get Random NY Plate</button>
+        </div>
+      </div>
 
-    <!-- Heading -->
-    <div class="heading">
-      <!-- <h1>NYC 2010-2014</h1> -->
-    </div>
-
-    <!-- NY Plate SVG -->
-    <div class="ny-plate-div">
-      <img class="ny-plate-svg" src="./assets/ny-plate.svg" />
-      <span class="ny-plate-number" id="ny-plate-number"></span>
-    </div>
-
-    <!-- Random NY Plate Button -->
-    <div class="ny-plate-button">
-      <button id="ny-plate-button">Get Random NY Plate</button>
-    </div>
-
-    <!-- Display Plate -->
-    <!-- <div class="plate">
+      <!-- Display Plate -->
+      <!-- <div class="plate">
       <div id="plate-div">
         <span class="number" id="plate-number"></span>
       </div>
     </div> -->
 
-    <!-- More About Vanity Plates -->
-    <div class="about-div">
-      <h2>More About Vanity Plates</h2>
-      <p>
-        Prohibited Combinations The DMV reviews requested personalized plate
-        combinations and is not required to issue a requested plate. Generally
-        avoid combinations using 3 letters followed by 4 numbers, or 5 numbers
-        followed by 2 letters, such as 'ABC1234' and '12345AB'. These plate
-        combinations are reserved by DMV and are not available as personalized
-        plates.
-      </p>
-      <p>
-        (2) Personalized plates bearing a plate number that represents a word,
-        phrase, expression, or that has a meaning, connotation or format that
-        the commissioner deems objectionable shall not be issued. Such plates
-        shall include, but need not be limited to, those that the commissioner
-        determines: (i) are obscene, profane, vulgar, repulsive, depraved, or
-        lewd; (ii) describe or refer to a sexual or intimate body part, area or
-        function; (iii) describe or refer to eliminatory or other bodily
-        functions; (iv) are derogatory, contemptuous, degrading, disrespectful
-        or inflammatory; (v) express, describe, advertise, advocate, promote,
-        encourage, glorify, or condone violence, crime or unlawful conduct; (vi)
-        describe, connote, or refer to illegal drug(s), controlled substance(s)
-        or related paraphernalia; (vii) may constitute copyright infringement,
-        or infringement of a trademark, trade name, service mark, or patent;
-        (viii) refer to, suggest, or may appear to refer to or to suggest any
-        governmental or law enforcement purpose, function or entity; (ix) do not
-        have at least one letter, consist of six numbers followed by one letter,
-        or may be misleading or confusing in identifying a plate number (e.g.,
-        the substitution of the numeral zero for the letter “O”); or (x) are
-        reserved for issuance to specific classes of vehicles other than
-        passenger vehicles (e.g., plates assigned to county clerks, members of
-        certain professions, historic motor vehicles, etc.).
-      </p>
-      <p>
-        Since April 1, 2010, the state DMV has issued the “Empire Gold” license
-        plate, which has navy plate numbers and says “Empire State.”
-      </p>
-      <!-- Source: NY DMV https://dmv.ny.gov/plates/restrictions-personalized-plates -->
+      <!-- More About Vanity Plates -->
+      <div class="about-div">
+        <h2>More About Vanity Plates</h2>
+        <p>
+          Prohibited Combinations The DMV reviews requested personalized plate
+          combinations and is not required to issue a requested plate. Generally
+          avoid combinations using 3 letters followed by 4 numbers, or 5 numbers
+          followed by 2 letters, such as 'ABC1234' and '12345AB'. These plate
+          combinations are reserved by DMV and are not available as personalized
+          plates.
+        </p>
+        <p>
+          (2) Personalized plates bearing a plate number that represents a word,
+          phrase, expression, or that has a meaning, connotation or format that
+          the commissioner deems objectionable shall not be issued. Such plates
+          shall include, but need not be limited to, those that the commissioner
+          determines: (i) are obscene, profane, vulgar, repulsive, depraved, or
+          lewd; (ii) describe or refer to a sexual or intimate body part, area
+          or function; (iii) describe or refer to eliminatory or other bodily
+          functions; (iv) are derogatory, contemptuous, degrading, disrespectful
+          or inflammatory; (v) express, describe, advertise, advocate, promote,
+          encourage, glorify, or condone violence, crime or unlawful conduct;
+          (vi) describe, connote, or refer to illegal drug(s), controlled
+          substance(s) or related paraphernalia; (vii) may constitute copyright
+          infringement, or infringement of a trademark, trade name, service
+          mark, or patent; (viii) refer to, suggest, or may appear to refer to
+          or to suggest any governmental or law enforcement purpose, function or
+          entity; (ix) do not have at least one letter, consist of six numbers
+          followed by one letter, or may be misleading or confusing in
+          identifying a plate number (e.g., the substitution of the numeral zero
+          for the letter “O”); or (x) are reserved for issuance to specific
+          classes of vehicles other than passenger vehicles (e.g., plates
+          assigned to county clerks, members of certain professions, historic
+          motor vehicles, etc.).
+        </p>
+        <p>
+          Since April 1, 2010, the state DMV has issued the “Empire Gold”
+          license plate, which has navy plate numbers and says “Empire State.”
+        </p>
+        <!-- Source: NY DMV https://dmv.ny.gov/plates/restrictions-personalized-plates -->
+      </div>
+
+      <!-- Resources Section -->
+      <div id="resource-section" class="resource-section">
+        <h1>Resources</h1>
+        <div class="resource-links">
+          <a
+            href="https://github.com/AnniePawl/plate-data-visualization"
+            target="blank"
+            >My GitHub Repo</a
+          >
+          <a href="https://github.com/veltman/ca-license-plates" target="blank"
+            >CA Plate Dataset</a
+          >
+          <a
+            href="https://www.kaggle.com/crawford/nyc-rejected-vanity-plates"
+            target="blank"
+            >NY Plate Dataset</a
+          >
+        </div>
+      </div>
     </div>
 
     <script src="https://d3js.org/d3.v5.min.js"></script>

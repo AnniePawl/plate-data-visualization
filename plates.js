@@ -39,8 +39,15 @@ function handleCAData(csv) {
   // Get random plate
   var button = document.getElementById("ca-plate-button");
 
-  let plateNumber = csv[0].plate;
+  let plateNumber = csv[10].plate;
   document.getElementById("ca-plate-number").innerHTML = plateNumber;
+  let customerMeaning = csv[10].customer_meaning;
+  document.getElementById("applicant-explanation").innerHTML = customerMeaning;
+  let reviewerComments = csv[10].reviewer_comments;
+  document.getElementById("dmv-comments").innerHTML = reviewerComments;
+  let status = csv[10].status;
+  document.getElementById("verdict").innerHTML = status;
+
   console.log(plateNumber);
 
   button.addEventListener("click", function(e) {
@@ -67,6 +74,7 @@ function getNextPlate(csv) {
     plateNumber.reviewer_comments;
 
   // Verdict
+  plateNumber.status == "y" ? "Yes" : "No";
   document.getElementById("verdict").innerHTML = plateNumber.status;
 }
 
