@@ -15,13 +15,13 @@ $nav-color: #30405c;
   text-transform: uppercase;
   font-family: "Oswald";
   color: $ca-blue;
-  h1 {
-    font-size: 5em;
-  }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 // Navbar Styles
-/* Add a black background color to the top navigation */
 .topnav {
   top: 0;
   position: fixed;
@@ -51,32 +51,20 @@ $nav-color: #30405c;
       text-decoration: none;
     }
   }
+  a:hover {
+    color: $ca-light-red;
+    text-decoration: none;
+  }
 }
 
-/* Change the color of links on hover */
-.topnav a:hover {
-  color: $ca-light-red;
-  text-decoration: none;
+#ca-plate-section {
+  min-height: 100vh;
+  @include center-flex();
+  flex-direction: column;
 }
-
-/* Add a color to the active/current link */
-.topnav a.active {
-  color: $ca-light-red;
-}
-
-// .main-heading {
-//   @include center-flex();
-//   flex-direction: column;
-//   @include main-font();
-//   margin-top: 135px;
-//   margin-bottom: 20px;
-//   font-size: 1vw;
-// }
-
 #ca-plate-div {
   @include center-flex();
   position: relative;
-  margin-top: 100px;
   .ca-plate-number {
     position: absolute;
     font-family: "Dosis";
@@ -89,8 +77,7 @@ $nav-color: #30405c;
       -3px -3px 3px rgba(255, 355, 255, 0.5);
   }
   img {
-    width: 50vw;
-    margin: -10px;
+    width: 55vw;
   }
 }
 
@@ -113,8 +100,7 @@ $nav-color: #30405c;
 .ca-plate-info {
   display: flex;
   flex-direction: column;
-  margin-left: 29vw;
-
+  margin-top: 30px;
   p {
     font-weight: 600;
     font-size: 2em;
@@ -125,6 +111,12 @@ $nav-color: #30405c;
     font-weight: 300;
     text-transform: lowercase;
   }
+}
+
+// NY PLATE -------------------------------------
+
+#ny-plate-section {
+  min-height: 100vh;
 }
 
 .ny-plate-number {
@@ -168,7 +160,6 @@ $nav-color: #30405c;
   text-transform: uppercase;
   font-family: "Oswald";
   font-size: 2em;
-  margin-top: 75px;
   p {
     width: 70vw;
     font-size: 20px;
@@ -206,20 +197,30 @@ $nav-color: #30405c;
 
 // Navbar Media Query
 @media only screen and (max-width: 1280px) {
-  .topnav > h1 {
+  .topnav > h1,
+  .resource-section > h1 {
     font-size: 35px;
   }
   .topnav > .nav-links a {
     font-size: 25px;
     margin-right: 20px;
   }
+  #ca-plate-div img {
+    width: 80vw;
+  }
 }
 
-@media only screen and (max-width: 930px) {
+@media only screen and (max-width: 1030px) {
   .topnav > h1 {
     font-size: 35px;
   }
   .topnav > .nav-links {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .topnav > h1 {
+    font-size: 25px;
   }
 }

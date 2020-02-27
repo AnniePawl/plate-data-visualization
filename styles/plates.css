@@ -1,4 +1,7 @@
-/* Add a black background color to the top navigation */
+html {
+  scroll-behavior: smooth;
+}
+
 .topnav {
   top: 0;
   position: fixed;
@@ -28,18 +31,10 @@
   margin-left: 30px;
 }
 
-.topnav h1 h1 {
-  font-size: 5em;
-}
-
 .topnav .nav-links {
   text-transform: uppercase;
   font-family: "Oswald";
   color: #30405c;
-}
-
-.topnav .nav-links h1 {
-  font-size: 5em;
 }
 
 .topnav .nav-links a {
@@ -51,15 +46,26 @@
   text-decoration: none;
 }
 
-/* Change the color of links on hover */
 .topnav a:hover {
   color: #d15254;
   text-decoration: none;
 }
 
-/* Add a color to the active/current link */
-.topnav a.active {
-  color: #d15254;
+#ca-plate-section {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #ca-plate-div {
@@ -73,7 +79,6 @@
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  margin-top: 100px;
 }
 
 #ca-plate-div .ca-plate-number {
@@ -88,8 +93,7 @@
 }
 
 #ca-plate-div img {
-  width: 50vw;
-  margin: -10px;
+  width: 55vw;
 }
 
 .ca-plate-button {
@@ -116,10 +120,6 @@
   width: 12vh;
 }
 
-.ca-plate-button #ca-plate-button h1 {
-  font-size: 5em;
-}
-
 .ca-plate-button #ca-plate-button:hover {
   background-color: #30405c;
 }
@@ -132,7 +132,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-left: 29vw;
+  margin-top: 30px;
 }
 
 .ca-plate-info p {
@@ -144,13 +144,13 @@
   margin: 5px;
 }
 
-.ca-plate-info p h1 {
-  font-size: 5em;
-}
-
 .ca-plate-info span {
   font-weight: 300;
   text-transform: lowercase;
+}
+
+#ny-plate-section {
+  min-height: 100vh;
 }
 
 .ny-plate-number {
@@ -222,7 +222,6 @@
   text-transform: uppercase;
   font-family: "Oswald";
   font-size: 2em;
-  margin-top: 75px;
 }
 
 .about-div p {
@@ -255,18 +254,10 @@
   margin: 20px;
 }
 
-.resource-section h1 h1 {
-  font-size: 5em;
-}
-
 .resource-section .resource-links {
   text-transform: uppercase;
   font-family: "Oswald";
   color: #30405c;
-}
-
-.resource-section .resource-links h1 {
-  font-size: 5em;
 }
 
 .resource-section .resource-links a {
@@ -282,21 +273,31 @@
 }
 
 @media only screen and (max-width: 1280px) {
-  .topnav > h1 {
+  .topnav > h1,
+  .resource-section > h1 {
     font-size: 35px;
   }
   .topnav > .nav-links a {
     font-size: 25px;
     margin-right: 20px;
   }
+  #ca-plate-div img {
+    width: 80vw;
+  }
 }
 
-@media only screen and (max-width: 930px) {
+@media only screen and (max-width: 1030px) {
   .topnav > h1 {
     font-size: 35px;
   }
   .topnav > .nav-links {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .topnav > h1 {
+    font-size: 25px;
   }
 }
 /*# sourceMappingURL=plates.css.map */
