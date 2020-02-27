@@ -4,33 +4,51 @@
   position: fixed;
   width: 100%;
   z-index: 100;
-  background-color: #30405c;
-  height: 85px;
-  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #30405c;
+  height: 100px;
+  overflow: hidden;
 }
 
-/* Style the links inside the navigation bar */
-.topnav a {
+.topnav h1 {
   text-transform: uppercase;
   font-family: "Oswald";
   color: #30405c;
+  font-size: 55px;
+  letter-spacing: 2px;
+  color: white;
+  margin-left: 30px;
+}
+
+.topnav h1 h1 {
+  font-size: 5em;
+}
+
+.topnav .nav-links {
+  text-transform: uppercase;
+  font-family: "Oswald";
+  color: #30405c;
+}
+
+.topnav .nav-links h1 {
+  font-size: 5em;
+}
+
+.topnav .nav-links a {
   font-weight: 300;
   color: white;
   font-size: 30px;
-  color: #f2f2f2;
-  margin: 20px;
+  margin: 15px;
+  margin-right: 40px;
   text-decoration: none;
-}
-
-.topnav a h1 {
-  font-size: 5em;
 }
 
 /* Change the color of links on hover */
@@ -44,32 +62,6 @@
   color: #d15254;
 }
 
-.main-heading {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-transform: uppercase;
-  font-family: "Oswald";
-  color: #30405c;
-  margin-top: 135px;
-  margin-bottom: 20px;
-  font-size: 1vw;
-}
-
-.main-heading h1 {
-  font-size: 5em;
-}
-
 #ca-plate-div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -81,7 +73,7 @@
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  margin: -20px;
+  margin-top: 100px;
 }
 
 #ca-plate-div .ca-plate-number {
@@ -97,6 +89,7 @@
 
 #ca-plate-div img {
   width: 50vw;
+  margin: -10px;
 }
 
 .ca-plate-button {
@@ -248,7 +241,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100px;
+  height: 120px;
   bottom: 0;
   background-color: #30405c;
 }
@@ -257,6 +250,7 @@
   text-transform: uppercase;
   font-family: "Oswald";
   color: #30405c;
+  font-size: 50px;
   color: white;
   margin: 20px;
 }
@@ -276,7 +270,7 @@
 }
 
 .resource-section .resource-links a {
-  font-size: 25px;
+  font-size: 28px;
   font-weight: 300;
   margin: 12px;
   color: white;
@@ -285,5 +279,24 @@
 .resource-section .resource-links a:hover {
   color: #d15254;
   text-decoration: none;
+}
+
+@media only screen and (max-width: 1280px) {
+  .topnav > h1 {
+    font-size: 35px;
+  }
+  .topnav > .nav-links a {
+    font-size: 25px;
+    margin-right: 20px;
+  }
+}
+
+@media only screen and (max-width: 930px) {
+  .topnav > h1 {
+    font-size: 35px;
+  }
+  .topnav > .nav-links {
+    display: none;
+  }
 }
 /*# sourceMappingURL=plates.css.map */

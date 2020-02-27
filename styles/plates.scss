@@ -27,22 +27,30 @@ $nav-color: #30405c;
   position: fixed;
   width: 100%;
   z-index: 100;
-  background-color: $ca-blue;
-  height: 85px;
-  overflow: hidden;
   display: flex;
-  flex-direction: row;
-}
-
-/* Style the links inside the navigation bar */
-.topnav a {
-  @include main-font();
-  font-weight: 300;
-  color: white;
-  font-size: 30px;
-  color: #f2f2f2;
-  margin: 20px;
-  text-decoration: none;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $ca-blue;
+  height: 100px;
+  overflow: hidden;
+  h1 {
+    @include main-font();
+    font-size: 55px;
+    letter-spacing: 2px;
+    color: white;
+    margin-left: 30px;
+  }
+  .nav-links {
+    @include main-font();
+    a {
+      font-weight: 300;
+      color: white;
+      font-size: 30px;
+      margin: 15px;
+      margin-right: 40px;
+      text-decoration: none;
+    }
+  }
 }
 
 /* Change the color of links on hover */
@@ -56,19 +64,19 @@ $nav-color: #30405c;
   color: $ca-light-red;
 }
 
-.main-heading {
-  @include center-flex();
-  flex-direction: column;
-  @include main-font();
-  margin-top: 135px;
-  margin-bottom: 20px;
-  font-size: 1vw;
-}
+// .main-heading {
+//   @include center-flex();
+//   flex-direction: column;
+//   @include main-font();
+//   margin-top: 135px;
+//   margin-bottom: 20px;
+//   font-size: 1vw;
+// }
 
 #ca-plate-div {
   @include center-flex();
   position: relative;
-  margin: -20px;
+  margin-top: 100px;
   .ca-plate-number {
     position: absolute;
     font-family: "Dosis";
@@ -82,6 +90,7 @@ $nav-color: #30405c;
   }
   img {
     width: 50vw;
+    margin: -10px;
   }
 }
 
@@ -170,11 +179,12 @@ $nav-color: #30405c;
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: 100px;
+  height: 120px;
   bottom: 0;
   background-color: $ca-blue;
   h1 {
     @include main-font();
+    font-size: 50px;
     color: white;
     margin: 20px;
   }
@@ -182,7 +192,7 @@ $nav-color: #30405c;
   .resource-links {
     @include main-font();
     a {
-      font-size: 25px;
+      font-size: 28px;
       font-weight: 300;
       margin: 12px;
       color: white;
@@ -191,5 +201,25 @@ $nav-color: #30405c;
       color: $ca-light-red;
       text-decoration: none;
     }
+  }
+}
+
+// Navbar Media Query
+@media only screen and (max-width: 1280px) {
+  .topnav > h1 {
+    font-size: 35px;
+  }
+  .topnav > .nav-links a {
+    font-size: 25px;
+    margin-right: 20px;
+  }
+}
+
+@media only screen and (max-width: 930px) {
+  .topnav > h1 {
+    font-size: 35px;
+  }
+  .topnav > .nav-links {
+    display: none;
   }
 }
