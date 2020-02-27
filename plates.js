@@ -31,9 +31,10 @@ function handleNYData(csv) {
 }
 
 // Handle Data ---------------------
+
 function handleCAData(csv) {
-  const fields = csv.map(plates => plates.fields);
-  console.log(csv);
+  // const fields = csv.map(plates => plates.fields);
+  // console.log(csv);
 
   // Get random plate
   var button = document.getElementById("ca-plate-button");
@@ -42,14 +43,35 @@ function handleCAData(csv) {
   document.getElementById("ca-plate-number").innerHTML = plateNumber;
   console.log(plateNumber);
 
-  button.addEventListener("click", function() {
-    plateNumber = csv[Math.floor(Math.random() * csv.length)];
-    document.getElementById("ca-plate-number").innerHTML = plateNumber.plate;
+  button.addEventListener("click", function(e) {
+    getNextPlate(csv);
   });
+} // --------------------------------------
+
+function getNextPlate(csv) {
+  // plate
+  // review_reason_code
+  // customer_meaning
+  // reviewer_comments
+  // status
+
+  plateNumber = csv[Math.floor(Math.random() * csv.length)];
+  document.getElementById("ca-plate-number").innerHTML = plateNumber.plate;
+
+  // Applicant Explanation
+  document.getElementById("applicant-explanation").innerHTML =
+    plateNumber.customer_meaning;
+
+  // DMV Comments
+  document.getElementById("dmv-comments").innerHTML =
+    plateNumber.reviewer_comments;
+
+  // Verdict
+  document.getElementById("verdict").innerHTML = plateNumber.status;
 }
 
 // Plate Div -------------------------
-d3.select("#plate-div").on("click", function() {
-  console.log("tiny plate");
-  d3.select("#plate-number").html(plateNumber);
-});
+// d3.select("#plate-div").on("click", function() {
+//   console.log("tiny plate");
+//   d3.select("#plate-number").html(plateNumber);
+// });
