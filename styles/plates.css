@@ -153,16 +153,6 @@ html {
   min-height: 100vh;
 }
 
-.ny-plate-number {
-  font-family: "Dosis";
-  position: absolute;
-  margin-top: 20px;
-  color: #0b103c;
-  font-weight: 700;
-  font-size: 150px;
-  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5), -3px -3px 3px rgba(255, 255, 255, 0.5);
-}
-
 .ny-plate-div {
   position: relative;
   display: -webkit-box;
@@ -179,6 +169,16 @@ html {
 
 .ny-plate-div .ny-plate-svg {
   width: 55vw;
+}
+
+.ny-plate-div .ny-plate-number {
+  font-family: "Dosis";
+  position: absolute;
+  margin-top: 20px;
+  color: #0b103c;
+  font-weight: 700;
+  font-size: 150px;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5), -3px -3px 3px rgba(255, 255, 255, 0.5);
 }
 
 .ny-plate-button {
@@ -221,7 +221,6 @@ html {
           flex-direction: column;
   text-transform: uppercase;
   font-family: "Oswald";
-  font-size: 2em;
 }
 
 .about-div p {
@@ -298,6 +297,16 @@ html {
 @media only screen and (max-width: 500px) {
   .topnav > h1 {
     font-size: 25px;
+  }
+  .ca-plate-info {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+}
+
+@media only screen and (max-width: 415px) {
+  .topnav {
+    height: 55px;
   }
 }
 /*# sourceMappingURL=plates.css.map */

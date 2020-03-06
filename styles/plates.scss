@@ -118,24 +118,22 @@ html {
 #ny-plate-section {
   min-height: 100vh;
 }
-
-.ny-plate-number {
-  font-family: "Dosis";
-  position: absolute;
-  margin-top: 20px;
-  color: $ny-blue;
-  font-weight: 700;
-  font-size: 150px;
-  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5),
-    -3px -3px 3px rgba(255, 355, 255, 0.5);
-}
-
 .ny-plate-div {
   position: relative;
   @include center-flex();
   margin: 30px;
   .ny-plate-svg {
     width: 55vw;
+  }
+  .ny-plate-number {
+    font-family: "Dosis";
+    position: absolute;
+    margin-top: 20px;
+    color: $ny-blue;
+    font-weight: 700;
+    font-size: 150px;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5),
+      -3px -3px 3px rgba(255, 355, 255, 0.5);
   }
 }
 
@@ -159,7 +157,6 @@ html {
   flex-direction: column;
   text-transform: uppercase;
   font-family: "Oswald";
-  font-size: 2em;
   p {
     width: 70vw;
     font-size: 20px;
@@ -222,5 +219,14 @@ html {
 @media only screen and (max-width: 500px) {
   .topnav > h1 {
     font-size: 25px;
+  }
+  .ca-plate-info {
+    transform: scale(0.7);
+  }
+}
+
+@media only screen and (max-width: 415px) {
+  .topnav {
+    height: 55px;
   }
 }
