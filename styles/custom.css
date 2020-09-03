@@ -1,54 +1,29 @@
 html {
   scroll-behavior: smooth;
+  max-width: 100%;
 }
 
-.topnav {
-  top: 0;
-  position: fixed;
-  width: 100%;
-  z-index: 100;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+h1.navbar-brand {
+  text-transform: uppercase;
+  font-family: "Oswald";
+  color: #30405c;
+  color: white;
+  font-weight: 800;
+  font-size: 2.8em;
+}
+
+.navbar {
   background-color: #30405c;
+  width: 100%;
   height: 100px;
-  overflow: hidden;
 }
 
-.topnav h1 {
-  text-transform: uppercase;
-  font-family: "Oswald";
-  color: #30405c;
-  font-size: 55px;
-  letter-spacing: 2px;
+a.nav-link {
   color: white;
-  margin-left: 30px;
 }
 
-.topnav .nav-links {
-  text-transform: uppercase;
-  font-family: "Oswald";
-  color: #30405c;
-}
-
-.topnav .nav-links a {
-  font-weight: 300;
+a.nav-link:visited {
   color: white;
-  font-size: 30px;
-  margin: 15px;
-  margin-right: 40px;
-  text-decoration: none;
-}
-
-.topnav a:hover {
-  color: #d15254;
-  text-decoration: none;
 }
 
 #ca-plate-section {
@@ -114,7 +89,7 @@ html {
   color: #30405c;
   background-color: #8f3637;
   color: white;
-  font-size: 25px;
+  font-size: 18px;
   border-radius: 5px;
   height: 6vh;
   width: 12vh;
@@ -270,43 +245,4 @@ html {
   color: #d15254;
   text-decoration: none;
 }
-
-@media only screen and (max-width: 1280px) {
-  .topnav > h1,
-  .resource-section > h1 {
-    font-size: 35px;
-  }
-  .topnav > .nav-links a {
-    font-size: 25px;
-    margin-right: 20px;
-  }
-  #ca-plate-div img {
-    width: 80vw;
-  }
-}
-
-@media only screen and (max-width: 1030px) {
-  .topnav > h1 {
-    font-size: 35px;
-  }
-  .topnav > .nav-links {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .topnav > h1 {
-    font-size: 25px;
-  }
-  .ca-plate-info {
-    -webkit-transform: scale(0.7);
-            transform: scale(0.7);
-  }
-}
-
-@media only screen and (max-width: 415px) {
-  .topnav {
-    height: 55px;
-  }
-}
-/*# sourceMappingURL=plates.css.map */
+/*# sourceMappingURL=custom.css.map */
